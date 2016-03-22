@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" disable="false" focusTraversable="false" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" mouseTransparent="false" prefHeight="-1.0" prefWidth="-1.0" visible="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+  <children>
+    <Button fx:id="okButton" layoutX="392.0" layoutY="205.0" mnemonicParsing="false" onAction="#showDot" prefWidth="55.0" text="ОК" />
+    <TextField fx:id="y" layoutX="353.0" layoutY="123.0" prefWidth="-1.0" promptText="Введите координату Y" />
+    <TextField fx:id="x" editable="true" layoutX="353.0" layoutY="50.0" prefWidth="-1.0" promptText="Введите координату X"/>
+    <Label fx:id="errorLabel" visible="false" labelFor="$x" layoutX="325.0" layoutY="273.0" text="Введено неверное значение" textAlignment="LEFT" textFill="#ff3333" wrapText="false">
+      <font>
+        <Font size="13.0" />
+      </font>
+    </Label>
+    <AreaChart fx:id="coordinatePlane" animated="false" layoutX="23.0" layoutY="32.0" legendVisible="false" prefHeight="314.0" prefWidth="306.0">
+      <xAxis>
+        <NumberAxis animated="false" autoRanging="false" lowerBound="-25.0" side="BOTTOM" upperBound="25.0" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis animated="false" autoRanging="false" lowerBound="-25.0" side="LEFT" upperBound="25.0" />
+      </yAxis>
+    </AreaChart>
+  </children>
+</AnchorPane>
